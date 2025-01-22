@@ -14,7 +14,8 @@ export async function getUser(){
     };
     const response =await fetch(`${process.env.REACT_APP_HOST}/600/users/${BrowesrData.cbid}`,requestOptions);
     if(!response.ok){
-        throw { message: response.statusText, status:response.status} //esLint-disable-line
+        const errorMessage={ message: response.statusText, status:response.status}
+        throw errorMessage; 
     }
     const data= await response.json();
     return data;
@@ -29,7 +30,8 @@ export async function getUserOrders(cartList, total, user){
         }
         const response =await fetch(`${process.env.REACT_APP_HOST}/660/orders?user.id=${BrowesrData.cbid}`,requestOptions);
         if(!response.ok){
-            throw { message: response.statusText, status:response.status}  //esLint-disable-line
+            const errorMessage={ message: response.statusText, status:response.status}
+            throw errorMessage; 
         }
       const data =await response.json()
       return data
