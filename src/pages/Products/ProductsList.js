@@ -29,7 +29,7 @@ const searchterm=new URLSearchParams(search).get("q")
     }
 
       fetchProducts()
-    },[searchterm,initialProductList])
+    },[searchterm])
   return (
     <main>
         <section className="my-5">
