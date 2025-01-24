@@ -7,7 +7,7 @@ import { toast } from "react-toastify"
 import { useTitle } from "../../hooks/useTitle"
 import { useFilter } from "../../context"
 import { getProductList } from "../../services"
-
+import { toast } from "react-toastify"
 
 export const ProductsList = () => {
   const {products,initialProductList} =useFilter()  /* here it should match with const value={'productList':[1,2,3]} in FilterContext.js*/
